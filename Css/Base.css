@@ -1,0 +1,96 @@
+html {
+  height: 100vh;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
+}
+
+p {
+  margin: 15px 0px;
+}
+
+body {
+  position: relative;  
+  margin: 0; 
+  
+  background-color: #95BF74;
+  font-family: Ubuntu, sans-serif; 
+  box-sizing: border-box;
+}
+
+header {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  height: 90vh;
+  
+  background-image: url(../Gallery/Background-Img.PNG);
+  background-position: center -60px;
+  background-size: auto;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  
+}
+
+.logo-container {
+  margin-bottom: 10px;
+  background-color: rgba(255,255,255,0.5);
+  border-radius: 20px;  
+  border: 2px solid #95BF74;
+  border: 2px solid white;
+  width: 90%;
+  text-align: center;
+}
+
+main {
+  height: 2000px;
+}
+
+.parallax-container {
+  height: 50vh;
+  background-image: url(../Gallery/Parallax-3.JPG);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-color: pink;
+}
+
+.welcome-sec {
+  padding: 30px;
+  text-align: center;
+  background-color: rgb(255,255,255);
+}
+
+.open-sec {
+  height: 50vh;
+  background-color: white;
+}
+
+
+
+
+.c1 {
+  background-color: #99DDC8;
+}
+
+.c2 {
+  background-color: #95BF74;
+}
+
+.c3 {
+  background-color: #659B5E;
+}
+
+.c4 {
+  background-color: #556F44;
+}
+
+.c5 {
+  background-color: #283F3B;
+}
+
+

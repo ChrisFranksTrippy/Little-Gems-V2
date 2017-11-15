@@ -1,0 +1,91 @@
+nav {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+}
+
+.burger {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  z-index: 10;
+  background-color: white;
+  border-radius: 50%;
+  box-shadow: 0 2px 2px black;
+  transition: all 0.3s linear;
+}
+
+.burger span {
+  position: absolute;
+  display: block;
+  width: 30px;
+  height: 4px;
+  border-radius: 10px;
+  background-color: #99DDC8;
+  transition: all 0.3s linear;
+}
+
+.burger span:first-child {
+  top: 15px;
+}
+
+.burger span:last-child {
+  bottom: 15px;
+}
+
+.cross {
+  transform: rotate(-180deg);
+  box-shadow: 0 -2px 2px black;
+}
+
+.cross span:first-child {
+  top: 23px;
+  transform: rotate(-45deg);
+}
+
+.cross span:nth-child(2) {
+  transform: rotateY(90deg);
+}
+
+.cross span:last-child {
+  bottom: 23px;
+  transform: rotate(45deg);
+}
+
+.menu-draw {
+  position: fixed;
+  top: 0;
+  right: -100vw;
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+    
+  width: 30vw;
+  height: 100vh;
+  border-left: 3px solid white;
+  
+  background-color: rgba(255,255,255,0.9);
+  
+  transition: right 0.3s ease-in-out;
+}
+
+.menu-draw span {
+  transform: rotate(-15deg);
+}
+
+.nav-item {
+  margin-left: 10px;
+  padding: 10px 0;
+  font-size: 2em;
+}
+
+.showMenu {
+  right: 0vw;
+}
