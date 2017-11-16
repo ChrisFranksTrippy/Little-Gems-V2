@@ -67,23 +67,26 @@ nav {
   flex-direction: column;
   justify-content: center;
     
-  width: 30vw;
+  width: 60vw;
   height: 100%;
+  
+  padding: 0px 30px;
+  
   border-left: 3px solid white;
   border-top-width: 0px;
   border-bottom-width: 0px;
   
   background-color: rgba(255,255,255,0.9);
-  
   transition: right 0.3s ease-in-out;
 }
 
 .menu-draw span {
+  //display: none;
   transform: rotate(-15deg);
 }
 
 .nav-item {
-  margin-left: 10px;
+  display: flex;
   padding: 10px 0;
   font-size: 2em;
 }

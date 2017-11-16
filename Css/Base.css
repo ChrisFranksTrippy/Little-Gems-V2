@@ -1,5 +1,4 @@
 html {
-  width: 100vw;
   height: 100vh;
 }
 
@@ -20,6 +19,7 @@ body {
   box-sizing: border-box;
 }
 
+
 header {
   position: relative;
   display: flex;
@@ -30,11 +30,11 @@ header {
   height: 90vh;
   
   background-image: url(../Gallery/Background-Img.PNG);
-  background-position: center -60px;
-  background-size: auto;
+  background-image: url(../Gallery/Background-Img-6.jpg);
+  background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  background-attachment: fixed;
+  //background-attachment: fixed;
   
 }
 
@@ -52,35 +52,46 @@ header {
   width: 100%;
 }
 
-main {
-  height: 2000px;
+.parallax-container {
+  height: 60vh;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  //background-attachment: fixed;
+  background-color: pink;
+}
+
+.img-1 {
+  background-image: url(../Gallery/Parallax-3.JPG);
+}
+
+.img-2 {
+  background-image: url(../Gallery/Group-3.JPG);
+}
+
+.img-3 {
+  background-image: url(../Gallery/Croft.JPG);
+}
+
+.img-4 {
+  background-image: url(../Gallery/Cool-Dog.JPG);
 }
 
 section {
   text-align: center;
   padding: 30px;
   background-color: rgb(255,255,255);
-  border-width: 2px 0;
-  border-color: lime;
+  border-width: 4px 0;
+  border-color: white;
   border-style: solid;
 }
 
-.parallax-container {
-  height: 60vh;
-  background-image: url(../Gallery/Parallax-3.JPG);
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-color: pink;
+.wide-sec {
+  padding: 30px 5px;
 }
 
-.open-sec {
-  padding: 20px 0px;
-}
-
-.open-sec h1 {
-  margin: 10px 0;
+section h1 {
+  margin: 10px;
 }
 
 
