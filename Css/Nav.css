@@ -1,9 +1,3 @@
-nav {
-  display: flex;
-  justify-content: flex-end;
-  width: 100%;
-}
-
 .burger {
   position: fixed;
   top: 10px;
@@ -58,7 +52,7 @@ nav {
   transform: rotate(45deg);
 }
 
-.menu-draw {
+nav {
   position: fixed;
   top: 0;
   right: -100vw;
@@ -70,9 +64,15 @@ nav {
   width: 60vw;
   height: 100%;
   
+  z-index: 8;
+  
   padding: 0px 30px;
   
-  border-left: 3px solid white;
+  border-left-width: 3px;
+  border-left-style: solid;
+  /*border-left-color: rgb(55,94,32);*/
+  border-left-color: white;
+  
   border-top-width: 0px;
   border-bottom-width: 0px;
   
@@ -80,17 +80,67 @@ nav {
   transition: right 0.3s ease-in-out;
 }
 
-.menu-draw span {
-  //display: none;
-  transform: rotate(-15deg);
-}
-
 .nav-item {
   display: flex;
-  padding: 10px 0;
+  padding: 20px 0;
   font-size: 2em;
+  color: black;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.nav-item span {
+  transition: color 0.3s ease-in-out;
+}
+
+.nav-item:hover {
+  color: #99DDC8;
+}
+
+.nav-item:hover .fa-facebook-square {
+  color: #4f64b1;
+}
+
+.nav-item:hover .fa-youtube-square {
+  color: #f4001c;
+}
+
+.nav-item span {
+  margin-right: 6px;
+}
+
+.paw-icon {
+  transform: rotate(-15deg);
 }
 
 .showMenu {
   right: 0vw;
+}
+
+@media screen and (min-width: 1100px) {
+  .burger {
+    display: none;
+  }  
+  
+  nav {
+    top: 0px;
+    right: auto;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    height: 60px;
+    background-color: rgba(255,255,255,0.95);
+    
+    border-left-width: 0px;
+    border-bottom-width: 3px;
+    border-bottom-color: rgb(55,94,32);
+    border-bottom-style: solid;
+    
+    box-sizing: border-box;
+  }
+  
+  .paw-icon {
+    display: none;
+  }
 }
