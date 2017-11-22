@@ -89,6 +89,10 @@ nav {
   text-decoration: none;
 }
 
+.active-nav-item {
+  color: #99DDC8;
+}
+
 .nav-item span {
   transition: color 0.3s ease-in-out;
 }

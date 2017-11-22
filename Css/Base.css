@@ -26,8 +26,8 @@ header {
   width: 100%;
   height: 90vh;
   
-  background-image: url(../Gallery/Background-Img.PNG);
-  background-image: url(../Gallery/Background-Img-6.jpg);
+  background-image: url(../gallery/background-img.PNG);
+  background-image: url(../gallery/background-img-6.jpg);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -54,28 +54,31 @@ header {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  //background-attachment: fixed;
-  background-color: pink;
 }
 
 .img-1 {
-  background-image: url(../Gallery/Parallax-3.JPG);
+  background-image: url(../gallery/parallax-3.jpg);
 }
 
 .img-2 {
-  background-image: url(../Gallery/Group-3.JPG);
+  background-image: url(../gallery/group-3.jpg);
 }
 
 .img-3 {
-  background-image: url(../Gallery/Croft.JPG);
+  background-image: url(../gallery/croft.jpg);
 }
 
 .img-4 {
-  background-image: url(../Gallery/Cool-Dog.JPG);
+  background-image: url(../gallery/cool-dog.jpg);
+}
+
+.img-5 {
+  background-image: url(../gallery/group-1.jpg);
 }
 
 section, footer {
   text-align: center;
+  font-size: 1.3em;
   padding: 30px;
   background-color: white;
   border-width: 4px 0;
@@ -113,7 +116,7 @@ section h1 {
     width: 90%;
     margin: 0 auto;
     background-color: #95BF74;
-    background-image: url(../Img/Two-Paw-Print-Angled.png);
+    background-image: url(../img/two-paw-print-angled.png);
     background-position: center;    
     background-repeat: repeat;
     background-size: 100px;
