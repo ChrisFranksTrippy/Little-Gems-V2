@@ -56,26 +56,6 @@ header {
   background-repeat: no-repeat;
 }
 
-.img-1 {
-  background-image: url(../gallery/parallax-3.jpg);
-}
-
-.img-2 {
-  background-image: url(../gallery/group-3.jpg);
-}
-
-.img-3 {
-  background-image: url(../gallery/croft.jpg);
-}
-
-.img-4 {
-  background-image: url(../gallery/cool-dog.jpg);
-}
-
-.img-5 {
-  background-image: url(../gallery/group-1.jpg);
-}
-
 section, footer {
   text-align: center;
   font-size: 1.3em;
