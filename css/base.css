@@ -10,7 +10,7 @@ body {
   position: relative; 
   margin: 0; 
   
-  //background-color: #95BF74;
+  /*background-color: #95BF74;*/
   background-color: rgb(240,240,240);
   font-family: Ubuntu, sans-serif; 
   box-sizing: border-box;
@@ -31,7 +31,6 @@ header {
   background-position: center 40%;
   background-size: cover;
   background-repeat: no-repeat;
-  //background-attachment: fixed;
   
 }
 
@@ -54,27 +53,6 @@ header {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-}
-
-
-.img-1 {
-  background-image: url(../gallery/parallax-3.jpg);
-}
-
-.img-2 {
-  background-image: url(../gallery/group-3.jpg);
-}
-
-.img-3 {
-  background-image: url(../gallery/croft.jpg);
-}
-
-.img-4 {
-  background-image: url(../gallery/cool-dog.jpg);
-}
-
-.img-5 {
-  background-image: url(../gallery/group-1.jpg);
 }
 
 section, footer {
