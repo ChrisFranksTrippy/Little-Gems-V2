@@ -1,0 +1,53 @@
+.bk-img {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.main-img {
+  width: 100%;
+  height: 85vh;
+  
+  background-image: url(../gallery/background-img-2.jpg); 
+}
+
+#slider-container {
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: 15vh;
+  overflow-x: auto;
+  background-color: #95BF74;
+}
+
+.cta-arrow-container {
+  position: fixed;
+  bottom: 5vh;
+  display: flex;
+  align-items: center;
+  padding: 0 5px;
+  
+}
+
+.cta-arrow-container--left {
+  left: 0px;
+}
+
+.cta-arrow-container--right {
+  right: 0px;
+}
+
+.cta-arrow {
+  padding: 5px;
+  background-color: rgba(200,200,200,0.8);
+  border: 2px solid black;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.slider-img {
+  flex-shrink: 0;
+  width: 100px;
+  height: 100%;
+  background-image: url(../gallery/background-img-3.jpg);
+}
