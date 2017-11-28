@@ -70,8 +70,20 @@ section, footer {
   padding: 30px 5px;
 }
 
+.map-sec {
+  padding: 0px 5px;
+  background-color: #95BF74;
+}
+
 section h1 {
   margin: 10px;
+}
+
+#map {
+  height: 80vh;
+  width: 100%;
+  background-color: grey;
+  margin: 0 auto;
 }
 
 .d-footer {
@@ -92,6 +104,7 @@ section h1 {
   padding: 2px;
 }
 
+/*
 @media screen and (min-width: 1100px) {
   body {
     width: 1100px;
@@ -110,8 +123,20 @@ section h1 {
     background-attachment: fixed;
   }
   
+  main {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  section {
+    width: 80%;
+    margin: 20px 0;
+  }
+  
   .parallax-container {
-    background-attachment: fixed;
+    height: 100px;
+    width: 100px;
+    //background-attachment: fixed;
   }
   
   .logo-container {
@@ -131,7 +156,41 @@ section h1 {
   }
   
 } 
+*/
 
+@media screen and (min-width: 100px) {
+  header {
+    height: 75vh;
+    background-attachment: fixed;
+  }
+  
+  .parallax-container {
+    background-attachment: fixed;
+  }
+  
+  .logo-container {
+    width: 400px;
+  }
+  
+  .logo-container {
+    width: 400px;
+  }
+  
+  /*  
+  footer {
+    margin-bottom: 30px;
+  }
+  
+  .d-footer {
+    display: flex;
+  }
+  
+  .d-hide {
+    display: none;
+  }
+  */
+  
+}
 
 
 .c1 {
