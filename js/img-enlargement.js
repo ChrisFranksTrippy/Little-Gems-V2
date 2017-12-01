@@ -59,5 +59,7 @@
   function enlargeImg(image, icon){
     console.log(image);
     image.classList.toggle("enlarge");
+    icon.classList.toggle("fa-expand");
+    icon.classList.toggle("fa-times");
   }
 })();
