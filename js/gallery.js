@@ -1,6 +1,7 @@
 (function(){
   
-  let mainImg = document.getElementById("main-img");  
+  let mainImg = document.getElementById("main-img"); 
+  let eTarget;
   let slideContainer = document.getElementById("slider-container");  
   let leftArrow = document.getElementById("cta-arrow-container--left");
   let rightArrow = document.getElementById("cta-arrow-container--right");
@@ -25,24 +26,38 @@
   function togglePicture(e){
     //console.log(e);
     
-    console.log(e.target.classList);
+    eTarget = e.target;
+    
+    console.log(eTarget.classList);
     
     let imgReg = new RegExp(/img-tag-\d{1,3}/);
     
-    console.log(e.target.classList.value);
-    console.log(imgReg.test(e.target.classList.value));
+    console.log(eTarget.classList.value);
+    console.log(imgReg.test(eTarget.classList.value));
     console.log(e.target.classList.value.match(imgReg));
     
     let mainImgClass = mainImg.classList.value.match(imgReg)[0];
-    let smImgClass = e.target.classList.value.match(imgReg)[0];
+    let smImgClass = eTarget.classList.value.match(imgReg)[0];
     
-    mainImg.classList.remove(mainImgClass);
-    mainImg.classList.add(smImgClass);
+    mainImg.classList.add("transition-img");
+    eTarget.classList.add("transition-img");
     
-    e.target.classList.remove(smImgClass);
-    e.target.classList.add(mainImgClass);
+    setTimeout(function(){
+      mainImg.classList.remove(mainImgClass);
+      mainImg.classList.add(smImgClass);      
+
+      eTarget.classList.remove(smImgClass);
+      eTarget.classList.add(mainImgClass);
+      
+      mainImg.classList.remove("transition-img");
+      eTarget.classList.remove("transition-img");
+
     
+    }, 400);
     
+    //mainImg.classList.remove("transition-img");
+    //eTarget.classList.remove("transition-img");
+        
   }
   
   function toggleArrows(){
