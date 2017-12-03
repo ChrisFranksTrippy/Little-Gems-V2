@@ -90,6 +90,10 @@ header {
   transform-origin: bottom right;
 }
 
+.fa-times {
+  bottom: 25px;
+}
+
 @keyframes expand-animation {
   0% {
     transform: rotate(0deg);
