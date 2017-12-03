@@ -76,7 +76,7 @@ header {
 .img-icon {
   position: absolute;
   bottom: 10px;
-  right: 15px;
+  right: 25px;
   padding: 5px;
   font-size: 25px;
   color: rgb(55,94,32);
@@ -180,7 +180,7 @@ section h1 {
 #top-arrow {
   position: fixed;
   bottom: 10px;
-  right: 15px;
+  right: 25px;
   padding: 5px;
   font-size: 25px;
   color: rgb(55,94,32);
@@ -264,15 +264,7 @@ section h1 {
   .parallax-container {
     background-attachment: fixed;
   }
-  
-  .img-icon {
-    right: 25px
-  }
-  
-  #top-arrow {
-    right: 25px;
-  }
-  
+
   
   
   /*  
