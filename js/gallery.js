@@ -1,3 +1,5 @@
+"use strict";
+
 (function(){
   
   let mainImg = document.getElementById("main-img"); 

@@ -1,3 +1,5 @@
+"use strict";
+
 (function() {
   
   let body = document.getElementsByTagName("body")[0];
@@ -16,7 +18,7 @@
   
   function toggleScrollArrow() {
     
-    console.log(body.scrollTop);
+    //console.log(body.scrollTop);
     
     if (body.scrollTop > (window.innerHeight / 2)) {
       //console.log(window.innerHeight);
