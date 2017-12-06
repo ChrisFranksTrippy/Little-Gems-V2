@@ -1,3 +1,8 @@
+/*
+https://medium.com/outsystems-experts/how-to-achieve-60-fps-animations-with-css3-db7b98610108
+Nav transition ref
+*/
+
 .burger {
   position: fixed;
   top: 10px;
@@ -55,13 +60,13 @@
 nav {
   position: fixed;
   top: 0;
-  right: -100vw;
+  right: 0vw;
   
   display: flex;
   flex-direction: column;
   justify-content: center;
     
-  width: 60vw;
+  width: 60%;
   height: 100%;
   
   z-index: 8;
@@ -70,14 +75,18 @@ nav {
   
   border-left-width: 3px;
   border-left-style: solid;
-  /*border-left-color: rgb(55,94,32);*/
   border-left-color: white;
   
   border-top-width: 0px;
   border-bottom-width: 0px;
   
   background-color: rgba(255,255,255,0.9);
-  transition: right 0.3s ease-in-out;
+	
+	transform: translateX(100%);
+	
+	will-change: transform;
+	
+  transition: transform 0.3s ease-in-out;
 }
 
 .nav-item {
@@ -118,7 +127,7 @@ nav {
 }
 
 .showMenu {
-  right: 0vw;
+  transform: translateX(0%);
 }
 
 @media screen and (min-width: 1100px) {
