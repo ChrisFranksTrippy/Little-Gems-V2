@@ -18,7 +18,7 @@
   
   function toggleScrollArrow() {
     
-    console.log(window.pageYOffset);
+    //console.log(window.pageYOffset);
     
     if (window.pageYOffset > (window.innerHeight / 2)) {
       //console.log(window.innerHeight);

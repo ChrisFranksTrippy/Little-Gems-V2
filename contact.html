@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -47,11 +48,34 @@
 
 
 	<main>
-		<section class="wide-sec">
+		<!--<section class="wide-sec">
 			<h2>To check availably at Little Gems doggy day care:</h2>
 			<p>Please contact Helen on: 07805 547940 or email: helen1230@me.com</p>
 			<p>Or for any other queries or questions, please feel free to call us, we would be happy to help!</p>
-		</section>
+		</section>-->
+		<form class="contact-form wide-sec">
+		    	
+			<h2>Check availably at Little Gems doggy day care:</h2>
+
+			<label>Enter your dogs breed: <input id="breed-input" list="breeds" name="breed-input" /></label>
+			<datalist id="breeds"></datalist>
+
+			<button id="check-btn" type="button"><span class="nav-icon fa fa-paw fa-fw paw-icon" aria-hidden="true"></span><span>Check</span><span class="nav-icon fa fa-paw fa-fw paw-icon" aria-hidden="true"></span></button>
+
+			<figure class="display-figure">
+				<img id="breed-img" class="unknown-breed" src="img/Unknown.png" alt="Logo">
+				<span class="fa img-icon fa-expand"></span>
+				<figcaption id="breed-caption"></figcaption>
+			</figure>
+			
+			<label>First name: <input /></label>
+			<label>Last name: <input /></label>
+			<label>Contact number: <input /></label>
+			<label>Contact email: <input /></label>
+			
+			<button type="submit">Submit</button>
+			
+		</form>
 
 		<div class="map-sec">
 			<div id="map"></div>
@@ -79,15 +103,6 @@
 			<h2 class="d-hide">Email:</h2>
 			<h2 class="d-hide">helen1230@me.com</h2>
 
-			<!--Site map in header and footer
-          Github branches 
-          Report in mark down about user testing 
-          Wireframe sketch 
-
-          TO-DO
-            Add up arrow to return to the top of the page - assign z-index inbetween the menu and the base page.
-
-      -->
 		</footer>
 
 	</main>
@@ -96,10 +111,12 @@
 
 	<script src="js/menu.js"></script>
 	<script src="js/scroll-arrow.js"></script>
+	<script src="js/dog-api.js"></script>
 
 	<script src="js/map-api.js"></script>
 
 	<script src="https://maps.googleapis.com/maps/api/js?key=APIKEY&callback=initMap" async defer></script>
 
-</body>    
+</body>
+
 </html>

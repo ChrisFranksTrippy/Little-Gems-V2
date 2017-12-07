@@ -58,9 +58,12 @@ header {
 	width: 100%;
 }
 
+figure {
+	margin: 0px;
+}
+
 .fig-sec {
 	height: 60vh;
-	margin: 0px;
 	background-color: white;
 }
 
@@ -150,6 +153,7 @@ header {
 }
 
 section,
+form,
 footer,
 .map-sec {
 	text-align: center;
@@ -172,6 +176,66 @@ footer,
 
 section h1 {
 	margin: 10px;
+}
+
+.contact-form {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+}
+
+.contact-form h2 {
+	margin-bottom: 10px;
+}
+
+.contact-form input {
+	margin: 5px 0px;
+	font-size: 18px;
+	text-align: center;
+}
+
+.contact-form datalist {
+	max-height: 200px;
+	overflow: scroll;
+}
+
+.contact-form button {
+	display: flex;
+	justify-content: space-around;
+	width: 80%;
+	margin: 5px 0px;
+	padding: 10px;
+	font-size: 18px;
+	//color: white;
+	//background-color: #95BF74;
+}
+
+.contact-form button span:last-child {
+	transform: rotate(15deg);
+	transition: transform 1s ease;
+}
+
+.display-figure {
+	margin: 20px 10px;
+}
+
+/*.display-figure figcaption::first-letter {
+	text-transform: uppercase;
+}*/
+
+.display-figure figcaption {
+	text-transform: capitalize;
+	text-decoration: underline;
+}
+
+#breed-img {
+	max-width: 100%;
+	max-height: 60vh;
+	border-radius: 4px;
+}
+
+.unknown-breed {
+	width: 50%;
 }
 
 #map {
