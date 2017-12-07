@@ -2,29 +2,33 @@
 
 (function() {
   
-  let body = document.getElementsByTagName("body")[0];
+  //let body = document.getElementsByTagName("main")[0];
   let windowHeight = window.innerHeight;
   let topArrow = document.getElementById("top-arrow");
   
-  console.log(body);
+  //console.log(body);
   
   document.addEventListener("scroll", toggleScrollArrow);
-  document.addEventListener("onresize", function() { 
+  /*document.addEventListener("onresize", function() { 
     console.log("Change");
     windowHeight = window.innerHeight; 
-  });
+  });*/
   
   
   
   function toggleScrollArrow() {
     
-    //console.log(body.scrollTop);
+    console.log(window.pageYOffset);
     
-    if (body.scrollTop > (window.innerHeight / 2)) {
+    if (window.pageYOffset > (window.innerHeight / 2)) {
       //console.log(window.innerHeight);
-      topArrow.classList.add("show-arrow");
+			if (!topArrow.classList.contains("show-arrow")) {
+      	topArrow.classList.add("show-arrow");
+			}
     } else {
-      topArrow.classList.remove("show-arrow");
+      if (topArrow.classList.contains("show-arrow")) {
+      	topArrow.classList.remove("show-arrow");
+			}
     }
     
     

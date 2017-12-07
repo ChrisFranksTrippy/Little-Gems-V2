@@ -14,12 +14,10 @@
   
   for (let i = 0; i < images.length; i++) { 
     //console.log(images[i]);
-    images[i].addEventListener("click", function(e) {
-      enlargeImgRequest(e); 
-    });
-  }
+    images[i].addEventListener("click", enlargeImgRequest);
+	}
   
-  function enlargeImgRequest(e) {    
+  function enlargeImgRequest(event) {    
     //console.log(e);
     let image;
     let icon;
@@ -29,12 +27,12 @@
     let clickTimeDif = currentClickTime - lastClickTime;
     lastClickTime = currentClickTime;
     
-    if (e.target.classList.contains("parallax-container")) {
+    if (event.target.classList.contains("parallax-container")) {
       //Images clicked
       if (clickTimeDif < 400 && clickTimeDif > 0) {
         //Image double click
-        image = e.target;
-        icon = e.target.firstElementChild;
+        image = event.target;
+        icon = event.target.firstElementChild;
         
         //console.log(clickTimeDif);
         //console.log(image);
@@ -46,8 +44,8 @@
       
     } else {
       //Span element clicked;
-      image = e.target.parentElement;
-      icon = e.target;
+      image = event.target.parentElement;
+      icon = event.target;
       
       //console.log(image);
       //console.log(icon);

@@ -85,12 +85,11 @@ nav {
 	transform: translateX(100%);
 	
 	will-change: transform;
-	
-  transition: transform 0.3s ease-in-out;
 }
 
 .nav-item {
   display: flex;
+	align-items: center;
   padding: 20px 0;
   font-size: 2em;
   color: black;
@@ -130,6 +129,10 @@ nav {
   transform: translateX(0%);
 }
 
+.transition-menu {
+	transition: transform 0.3s ease-in-out;
+}
+
 @media screen and (min-width: 1100px) {
   .burger {
     display: none;
@@ -150,6 +153,8 @@ nav {
     border-bottom-style: solid;
     
     box-sizing: border-box;
+		
+		transform: translateX(0%);
   }
   
   .paw-icon {
