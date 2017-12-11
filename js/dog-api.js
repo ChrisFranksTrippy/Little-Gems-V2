@@ -48,9 +48,10 @@
 		console.log(breedInput.value);
 		
 		let key;
+		let inputTxt = breedInput.value.toLowerCase();
 		
 		for (key in breedListArray) {
-			if (breedInput.value === breedListArray[key]) {
+			if (inputTxt === breedListArray[key]) {
 				//Match
 				console.log("match!");
 				

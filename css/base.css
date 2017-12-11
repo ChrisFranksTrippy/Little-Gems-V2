@@ -199,6 +199,14 @@ section h1 {
 	overflow: scroll;
 }
 
+.contact-form label {
+	display: flex; 
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+}
+
 .contact-form button {
 	display: flex;
 	justify-content: space-around;
@@ -206,22 +214,15 @@ section h1 {
 	margin: 5px 0px;
 	padding: 10px;
 	font-size: 18px;
-	//color: white;
-	//background-color: #95BF74;
 }
 
 .contact-form button span:last-child {
 	transform: rotate(15deg);
-	transition: transform 1s ease;
 }
 
 .display-figure {
 	margin: 20px 10px;
 }
-
-/*.display-figure figcaption::first-letter {
-	text-transform: uppercase;
-}*/
 
 .display-figure figcaption {
 	text-transform: capitalize;
@@ -261,6 +262,10 @@ section h1 {
 .d-footer div {
 	display: flex;
 	padding: 2px;
+}
+
+footer.wide-sec {
+	padding-bottom: 40px;
 }
 
 #top-arrow {
@@ -339,6 +344,29 @@ section h1 {
 @media screen and (min-width: 430px) {
 	.logo-container {
 		width: 400px;
+	}
+}
+
+@media screen and (min-width: 450px) {
+	.contact-form label {
+		flex-direction: row;
+	}
+}
+
+@media screen and (min-width: 470px) {
+	.contact-form label, .contact-form button {
+		width: 450px;
+	}	
+}
+
+@media screen and (min-width: 530px) {
+	footer div {
+		display: flex;
+		justify-content: center;
+	}
+	
+	footer div h2 {
+		padding: 0px 5px;
 	}
 }
 
