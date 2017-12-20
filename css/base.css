@@ -1,3 +1,5 @@
+
+
 h1,
 h2,
 h3,
@@ -15,8 +17,6 @@ p {
 body {
 	position: relative;
 	margin: 0;
-
-	/*background-color: #95BF74;*/
 	background-color: rgb(240, 240, 240);
 	font-family: Ubuntu, sans-serif;
 	box-sizing: border-box;
@@ -26,7 +26,6 @@ a {
 	text-decoration: none;
 }
 
-
 header {
 	position: relative;
 	display: flex;
@@ -35,13 +34,10 @@ header {
 	justify-content: flex-end;
 	width: 100%;
 	height: 90vh;
-
-
 	background-image: url(../gallery/background-img-6.jpg);
 	background-position: center 40%;
 	background-size: cover;
 	background-repeat: no-repeat;
-
 }
 
 .logo-container {
@@ -114,6 +110,8 @@ figure {
 	bottom: 25px;
 }
 
+/*Shake and enlarge image
+Wait x period of time */
 @keyframes expand-animation {
 	0% {
 		transform: rotate(0deg);
@@ -200,7 +198,7 @@ section h1 {
 }
 
 .contact-form label {
-	display: flex; 
+	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
 	align-items: center;
@@ -287,89 +285,41 @@ footer.wide-sec {
 	opacity: 1;
 }
 
-/*
-@media screen and (min-width: 1100px) {
-  body {
-    width: 1100px;
-    width: 90%;
-    margin: 0 auto;
-    background-color: #95BF74;
-    background-image: url(../img/two-paw-print-angled.png);
-    background-position: center;    
-    background-repeat: repeat;
-    background-size: 100px;
-    background-origin: content-box;
-  }
-  
-  header {
-    height: 75vh;
-    background-attachment: fixed;
-  }
-  
-  main {
-    display: flex;
-    flex-wrap: wrap;
-  }
-  
-  section {
-    width: 80%;
-    margin: 20px 0;
-  }
-  
-  .parallax-container {
-    height: 100px;
-    width: 100px;
-    //background-attachment: fixed;
-  }
-  
-  .logo-container {
-    width: 400px;
-  }
-  
-  footer {
-    margin-bottom: 30px;
-  }
-  
-  .d-footer {
-    display: flex;
-  }
-  
-  .d-hide {
-    display: none;
-  }
-  
-} 
-*/
-
+/*fix logo becoming too large*/
 @media screen and (min-width: 430px) {
 	.logo-container {
 		width: 400px;
 	}
 }
 
+/*allow input boxes on same line as the label text*/
 @media screen and (min-width: 450px) {
 	.contact-form label {
 		flex-direction: row;
 	}
 }
 
+/*fix width when not on mobile phone devices*/
 @media screen and (min-width: 470px) {
-	.contact-form label, .contact-form button {
+	.contact-form label,
+	.contact-form button {
 		width: 450px;
-	}	
+	}
 }
 
+/*allow footer contact details on same line*/
 @media screen and (min-width: 530px) {
 	footer div {
 		display: flex;
 		justify-content: center;
 	}
-	
+
 	footer div h2 {
 		padding: 0px 5px;
 	}
 }
 
+/*allow parallaxing images on desktop devices*/
 @media screen and (min-width: 1100px) {
 	header {
 		height: 75vh;
@@ -379,20 +329,4 @@ footer.wide-sec {
 	.parallax-container {
 		background-attachment: fixed;
 	}
-
-
-
-	/*  
-  footer {
-    margin-bottom: 30px;
-  }
-  
-  .d-footer {
-    display: flex;
-  }
-  
-  .d-hide {
-    display: none;
-  }
-  */
 }
