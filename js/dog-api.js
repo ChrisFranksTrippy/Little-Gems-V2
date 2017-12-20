@@ -14,6 +14,9 @@
 
 	let imgListUrlStart = "https://dog.ceo/api/breed/";
 	let imgListUrlEnd = "/images/random";
+	
+	
+	checkBtn.addEventListener("click", fetchImg);
 
 	let request = new Request(breedListUrl);
 
@@ -40,14 +43,10 @@
 
 		});
 
-	checkBtn.addEventListener("click", fetchImg);
-
-
-
-
+	//Get single random image
 	function fetchImg() {
 
-		////console.log("fetch img!");
+		//console.log("fetch img!");
 		console.log(breedInput.value);
 
 		let key;
@@ -55,6 +54,7 @@
 		let inputTxt = breedInput.value.toLowerCase().trim();
 
 		for (key in breedListArray) {
+			//Match the input text to the list of breeds
 			if (inputTxt === breedListArray[key]) {
 				//Match
 				//console.log("match!");
