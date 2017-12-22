@@ -1,16 +1,14 @@
 "use strict";
 
-//https://stackoverflow.com/questions/8825144/detect-double-tap-on-ipad-or-iphone-screen-using-javascript
-//Help from
-
 (function() {
   
-  console.log("img-enlargement active!");
+  //console.log("img-enlargement active!");
   
   let images = document.getElementsByClassName("parallax-container");
   
+	//Allow double tap on mobile devices
   let lastClickTime = new Date().getTime();
-  console.log(lastClickTime);
+  //console.log(lastClickTime);
   
   for (let i = 0; i < images.length; i++) { 
     //console.log(images[i]);
@@ -59,6 +57,7 @@
   function enlargeImg(image, icon){
     console.log(image);
     image.classList.toggle("enlarge");
+		//Change icon
     icon.classList.toggle("fa-expand");		
     icon.classList.toggle("fa-times");
   }

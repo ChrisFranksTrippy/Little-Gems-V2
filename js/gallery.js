@@ -9,8 +9,8 @@
 	let rightArrow = document.getElementById("cta-arrow-container--right");
 
 
-	console.log(slideContainer.offsetWidth);
-	console.log(slideContainer.childElementCount);
+	//console.log(slideContainer.offsetWidth);
+	//console.log(slideContainer.childElementCount);
 	console.log(slideContainer.children[0].offsetWidth);
 
 	let maxScrollSlideContainer = slideContainer.children[0].offsetWidth * slideContainer.childElementCount - slideContainer.offsetWidth;
@@ -26,51 +26,58 @@
 	rightArrow.addEventListener("click", rightArrowClick);
 
 	function togglePicture(event) {
-		console.log(event);
+		//console.log(event);
 		
+		//Prevent double clicks errors
 		slideContainer.removeEventListener("click", togglePicture);
 
 		eTarget = event.target;
 
-		console.log("eTarget");
-		console.log(eTarget);
+		//console.log("eTarget");
+		//console.log(eTarget);
 
 
 
-		console.log(eTarget.classList);
+		//console.log(eTarget.classList);
 
 		let imgReg = new RegExp(/img-tag-\d{1,3}/);
 
-		console.log(eTarget.classList.value);
-		console.log(imgReg.test(eTarget.classList.value));
-		console.log(eTarget.classList.value.match(imgReg));
+		//console.log(eTarget.classList.value);
+		//console.log(imgReg.test(eTarget.classList.value));
+		//console.log(eTarget.classList.value.match(imgReg));
 
 		let mainImgClass = mainImg.classList.value.match(imgReg)[0];
 		let smImgClass = eTarget.classList.value.match(imgReg)[0];
 
+		//Shrink Img
 		mainImg.classList.add("transition-img");
 		eTarget.classList.add("transition-img");
 
 		//Add event listener for transition instead of time out
 
+		
 		setTimeout(function () {
+			//Change Img
 			mainImg.classList.remove(mainImgClass);
 			mainImg.classList.add(smImgClass);
 
 			eTarget.classList.remove(smImgClass);
 			eTarget.classList.add(mainImgClass);
 
+			//Enlarge Img
 			mainImg.classList.remove("transition-img");
 			eTarget.classList.remove("transition-img");
 
 
 		}, 400);
 
+		//Listen for clicks again
 		slideContainer.addEventListener("click", togglePicture);
 
 	}
 
 	function toggleArrows() {
+		//Arrows appear when the container has scrolled away from the edge
 		if (slideContainer.scrollLeft === 0) {
 			leftArrow.classList.add("hide-arrow");
 		} else {
@@ -85,7 +92,7 @@
 	}
 
 	function leftArrowClick() {
-		console.log("Left Arrow");
+		//console.log("Left Arrow");
 		let scrollAmount = 0;
 		//scrollAmount = slideContainer.scrollLeft - slideContainer.offsetWidth;
 		scrollAmount = slideContainer.scrollLeft - scrollClickAmount;
@@ -93,11 +100,12 @@
 			scrollAmount = 0;
 		}
 
+		//Slide left a container width amount
 		slideContainer.scrollLeft = scrollAmount;
 	}
 
 	function rightArrowClick() {
-		console.log("Right Arrow");
+		//console.log("Right Arrow");
 		let scrollAmount = 0;
 		//scrollAmount = slideContainer.scrollLeft + slideContainer.offsetWidth;
 		scrollAmount = slideContainer.scrollLeft + scrollClickAmount;
@@ -105,6 +113,7 @@
 			scrollAmount = maxScrollSlideContainer;
 		}
 
+		//Slide right a container width amount
 		slideContainer.scrollLeft = scrollAmount;
 	}
 
