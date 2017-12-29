@@ -27,7 +27,7 @@ The site is made up of 5 pages and 2 direct links to social media pages on Faceb
 
 The website it's self does not display a dedicated site map because all links to the pages within the site are displayed in the navigation menu.
 
-* [Site Map](https://github.com/ChrisFranksTrippy/Little-Gems-V2/tree/master/readme-resources/sitemap.png)
+* [Site Map](https://github.com/ChrisFranksTrippy/Little-Gems-V2/tree/master/readme-resources/sitemap.jpg)
 
 ## Responsive Design
 
