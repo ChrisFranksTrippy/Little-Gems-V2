@@ -27,7 +27,7 @@ The site is made up of 5 pages and 2 direct links to social media pages on Faceb
 
 The website it's self does not display a dedicated site map because all links to the pages within the site are displayed in the navigation menu.
 
-*[Site Map](https://github.com/ChrisFranksTrippy/Little-Gems-V2/tree/master/readme-resources/sitemap.png)
+* [Site Map](https://github.com/ChrisFranksTrippy/Little-Gems-V2/tree/master/readme-resources/sitemap.png)
 
 ## Responsive Design
 
@@ -36,28 +36,29 @@ This is a reqiured aspect of the site, not only to readable on devices with a di
 ## Wireframes
 
 ### Navigation Menu
-*[Mobile]()
-*[Desktop]()
+* [Mobile](https://github.com/ChrisFranksTrippy/Little-Gems-V2/tree/master/readme-resources/nav-mobile-wireframe.jpg)
+* [Desktop](https://github.com/ChrisFranksTrippy/Little-Gems-V2/tree/master/readme-resources/nav-desktop-wireframe.jpg)
 
 ### Home
-*[Mobile]()
-*[Desktop]()
+* [Mobile](https://github.com/ChrisFranksTrippy/Little-Gems-V2/tree/master/readme-resources/index-mobile-wireframe.jpg)
+* [Desktop](https://github.com/ChrisFranksTrippy/Little-Gems-V2/tree/master/readme-resources/index-desktop-wireframe.jpg)
 
 ### About
-*[Mobile]()
-*[Desktop]()
+* [Mobile](https://github.com/ChrisFranksTrippy/Little-Gems-V2/tree/master/readme-resources/about-mobile-wireframe.jpg)
+* [Desktop](https://github.com/ChrisFranksTrippy/Little-Gems-V2/tree/master/readme-resources/about-desktop-wireframe.jpg)
 
 ### Daycare
-*[Mobile]()
-*[Desktop]()
+* [Mobile](https://github.com/ChrisFranksTrippy/Little-Gems-V2/tree/master/readme-resources/daycare-mobile-wireframe.jpg)
+* [Desktop](https://github.com/ChrisFranksTrippy/Little-Gems-V2/tree/master/readme-resources/daycare-desktop-wireframe.jpg)
 
 ### Gallery
-*[Mobile]()
-*[Desktop]()
+* [Mobile](https://github.com/ChrisFranksTrippy/Little-Gems-V2/tree/master/readme-resources/gallery-mobile-wireframe.jpg)
+* [Desktop](https://github.com/ChrisFranksTrippy/Little-Gems-V2/tree/master/readme-resources/gallery-desktop-wireframe.jpg)
 
 ### Contact
-*[Mobile]()
-*[Desktop]()
+* [Mobile](https://github.com/ChrisFranksTrippy/Little-Gems-V2/tree/master/readme-resources/contact-mobile-wireframe.jpg)
+* [Desktop 1](https://github.com/ChrisFranksTrippy/Little-Gems-V2/tree/master/readme-resources/contact-desktop-wireframe.jpg)
+* [Desktop 2](https://github.com/ChrisFranksTrippy/Little-Gems-V2/tree/master/readme-resources/contact-desktop-wireframe2.jpg)
 
 ## Information Architecture and Accessibility
 
@@ -84,6 +85,22 @@ Bright and dark greens are used to distinguish content and add breaks in between
 
 All code is my own, only influenced by third parties. None of their actual code is used.
 
+## Code Development & Issues Solved
+
+An issue occured while developing the "img-enlargement" script. When testing the script on google chrome's mobile simulator, the double click event listener functioned as expecting, enlarging the div container to fill the user's window and shrinked back to the orginal size upon doubling clicking again. However all users testing the site on mobile devices were unable to enlarge the image via double tapping the images. They could only use the icon in the bottom right of the images to enlarge and shrink the images as the event listener for this function is a regular "click". To over come this problem a basic idea found on Stack Overflow [1] suggested to register the time when ever the event listener was triggered and store this value. On the second tab of the screen, if the time of this tab is within 500 milliseconds of the previous, then think of these tabs as a single double tab. 
+This idea was built upon within the script using a single click event listener, calling a function call "enlargeImgRequest" where it listens to what element was clicked. If the element is the enlarge icon it will enlarge the image within the single click. If the element was the "parallax-container" it will check what time the last click was registered, if this is within 400 milliseconds then the image will also enlarge.
+
+While testing the site on lower end mobile devices, the transition of navigation menu sliding in from the side was not a smooth motion. After researching methods to improve the FPS (Frames Per Second) of animating elements, a post from "José Rosário" [2] showed a method achieving "smooth as butter" 60 FPS. After reading throught the post, I changed some CSS styles of nav container in the following commit.
+
+* [Commit 56e6d13cb96c701cd6f02a0b779b39dade12eea2](https://github.com/ChrisFranksTrippy/Little-Gems-V2/commit/56e6d13cb96c701cd6f02a0b779b39dade12eea2)
+
+After this commit, tests were done using google development tools, and the frame rate of the transition after these changes shows a constant rate during the transition of the nav container.
+
+## User Testing Images
+
+* [Testing Mobile Nav](https://github.com/ChrisFranksTrippy/Little-Gems-V2/tree/master/readme-resources/user-test-nav.jpg)
+* [Testing Dog.ceo API](https://github.com/ChrisFranksTrippy/Little-Gems-V2/tree/master/readme-resources/user-test-dog-api.jpg)
+
 ## API
 
 ### Google Maps API
@@ -100,7 +117,7 @@ The Dog.ceo API is an API that is used on the contact page of the site to reteri
 		
 ## References
 
-* https://stackoverflow.com/questions/8825144/detect-double-tap-on-ipad-or-iphone-screen-using-javascript
+[1] https://stackoverflow.com/questions/8825144/detect-double-tap-on-ipad-or-iphone-screen-using-javascript
 
-* https://medium.com/outsystems-experts/how-to-achieve-60-fps-animations-with-css3-db7b98610108
+[2] https://medium.com/outsystems-experts/how-to-achieve-60-fps-animations-with-css3-db7b98610108
 
